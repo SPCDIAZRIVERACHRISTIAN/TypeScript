@@ -1,3 +1,19 @@
+var StudentClass = /** @class */ (function () {
+    function StudentClass(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    StudentClass.prototype.workOnHomework = function () {
+        return "Currently working";
+    };
+    StudentClass.prototype.displayName = function () {
+        return "".concat(this.firstName);
+    };
+    return StudentClass;
+}());
+var studentConstructor = StudentClass;
+var student = new studentConstructor('Jane', 'Doe');
+console.log(student.displayName());
 var director1 = {
     firstname: 'John',
     lastname: 'Doe',

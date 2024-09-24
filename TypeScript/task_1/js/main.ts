@@ -12,6 +12,33 @@ interface Directors extends Teacher {
     numberOfReports: number;
 }
 
+interface StudentConstructor {
+    new (firstName: string, lastName: string): StudentClass;
+}
+
+class StudentClass {
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return "Currently working";
+    }
+    displayName(): string {
+        return `${this.firstName}`;
+    }
+
+}
+
+const studentConstructor: StudentConstructor = StudentClass;
+const student = new studentConstructor('Jane', 'Doe');
+
+console.log(student.displayName());
+
 const director1: Directors = {
     firstname: 'John',
     lastname: 'Doe',
