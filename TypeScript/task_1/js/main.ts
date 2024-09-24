@@ -37,7 +37,7 @@ class StudentClass {
 const studentConstructor: StudentConstructor = StudentClass;
 const student = new studentConstructor('Jane', 'Doe');
 
-console.log(student.displayName());
+// console.log(student.displayName());
 
 const director1: Directors = {
     firstname: 'John',
@@ -50,4 +50,19 @@ const director1: Directors = {
     }
 };
 
-console.log(director1.printTeacher(director1.firstname, director1.lastname));
+// console.log(director1.printTeacher(director1.firstname, director1.lastname));
+interface DirectorInterface {
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workDirectorTasks(): string;
+}
+
+interface TeacherInterface {
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workTeacherTasks(): string;
+}
+
+class Director {
+    
+}
