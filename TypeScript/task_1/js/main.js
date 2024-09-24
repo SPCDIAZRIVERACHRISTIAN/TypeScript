@@ -80,6 +80,16 @@ function executeWork(employee) {
         console.log(employee.workTeacherTasks());
     }
 }
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else if (todayClass === "History") {
+        return "Teaching History";
+    }
+}
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));

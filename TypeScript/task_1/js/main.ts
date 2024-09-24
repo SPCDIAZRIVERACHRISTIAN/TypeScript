@@ -118,6 +118,20 @@ function executeWork(employee: Director | Teacher): void {
     }
 }
 
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: Subjects) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    } else if (todayClass === "History") {
+        return "Teaching History";
+    }
+}
+
+console.log(teachClass("Math"));
+
+console.log(teachClass("History"));
+
 console.log(createEmployee(200));
 
 console.log(createEmployee(1000));
