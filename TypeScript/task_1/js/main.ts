@@ -39,16 +39,25 @@ const student = new studentConstructor('Jane', 'Doe');
 
 // console.log(student.displayName());
 
-// const director1: Directors = {
-//     firstname: 'John',
-//     lastname: 'Doe',
-//     fullTimeEmployee: true,
-//     location: 'London',
-//     numberOfReports: 5,
-//     printTeacher(firstname, lastname) {
-//         return `${firstname[0]}. ${lastname}`;
-//     }
-// };
+const director1: Directors = {
+    firstname: 'John',
+    lastname: 'Doe',
+    fullTimeEmployee: true,
+    location: 'London',
+    numberOfReports: 5,
+    printTeacher(firstname, lastname) {
+        return `${firstname[0]}. ${lastname}`;
+    },
+    workFromHome: function (): string {
+        throw new Error("Function not implemented.");
+    },
+    getCoffeeBreak: function (): string {
+        throw new Error("Function not implemented.");
+    },
+    workTeacherTasks: function (): string {
+        throw new Error("Function not implemented.");
+    }
+};
 
 // console.log(director1.printTeacher(director1.firstname, director1.lastname));
 interface DirectorInterface {
