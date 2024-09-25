@@ -1,22 +1,20 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (const p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
+// task_3/main.ts
 exports.__esModule = true;
-const CRUD = require("./crud");
-const row = {
-    firstName: "Guillaume",
-    lastName: "Salva"
+var CRUD = require("./crud");
+// Create an object of type RowElement
+var row = {
+    firstName: 'Guillaume',
+    lastName: 'Salva'
 };
-const newRowID = CRUD.insertRow(row);
-const updatedRow = __assign(__assign({}, row), { age: 23 });
+// Insert the row and assign the result to newRowID
+var newRowID = CRUD.insertRow(row);
+// Update the row with age field set to 23
+var updatedRow = {
+    firstName: 'Guillaume',
+    lastName: 'Salva',
+    age: 23
+};
 CRUD.updateRow(newRowID, updatedRow);
+// Finally, delete the row by ID
 CRUD.deleteRow(newRowID);

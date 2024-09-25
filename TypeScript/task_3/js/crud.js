@@ -14,4 +14,4 @@ export function insertRow(row) {
     return rowId;
   }
 
-  module.exports = { insertRow, updateRow, deleteRow };
+export default { insertRow, deleteRow, updateRow };
